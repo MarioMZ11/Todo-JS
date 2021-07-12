@@ -1,6 +1,6 @@
 # Webpack Starter
 
-This is a template for my applications that using webpack.
+This is TODO app developed in JS vanilla with LocalStorage and webpack with live reload.
 
 ## Notes - Reminder:
 
