@@ -1,4 +1,4 @@
-# Webpack Starter
+# TODO Application
 
 This is TODO app developed in JS vanilla with LocalStorage and webpack with live reload.
 Look the live demo app at: https://mariomz11.github.io/Todo-JS/
