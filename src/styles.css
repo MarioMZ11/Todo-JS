@@ -300,7 +300,7 @@ body {
 	list-style: none;
 	position: absolute;
 	right: 0;
-	left: 0;
+	left: -115px;
 }
 
 .filters li {
@@ -331,7 +331,7 @@ html .clear-completed:active {
 	line-height: 20px;
 	text-decoration: none;
 	cursor: pointer;
-	left: 5px;
+	left: -55px;
 	
 }
 

@@ -29,7 +29,6 @@ export class TodoList{
                 break;
             }
         }
-
     }
 
     eliminarCompletados(){

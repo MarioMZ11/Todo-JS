@@ -8,6 +8,7 @@ const txtInput    = document.querySelector('.new-todo');
 const btnBorrarCompletados    = document.querySelector('.clear-completed');
 const ulFilters = document.querySelector('.filters');
 const anchorfiltros = document.querySelectorAll('.filtro');
+const pendientes = document.querySelectorAll('.todo-count');
 
 export const crearTodoHtml = (todo) =>{
         const htmlTodo = `
@@ -25,6 +26,12 @@ export const crearTodoHtml = (todo) =>{
         divTodoList.append(div.firstElementChild);
         return div.firstElementChild;
 }
+
+
+
+
+
+
 
 //Eventos
 
@@ -60,6 +67,7 @@ divTodoList.addEventListener('click', (event) => {
 btnBorrarCompletados.addEventListener('click', ()=>{
         todoList.eliminarCompletados();
 
+
         for(let i = divTodoList.children.length -1; i >= 0; i--){
 
            const elemento = divTodoList.children[i];
@@ -80,23 +88,26 @@ ulFilters.addEventListener('click', (event) =>{
         anchorfiltros.forEach(elem => elem.classList.remove('selected'));
         event.target.classList.add('selected');
 
-
-
         for(const elemento of divTodoList.children){
                 elemento.classList.remove('hidden');
                 const completado = elemento.classList.contains('completed');
+                
 
                 switch(filtro){
                         case 'Pendientes':
                                 if(completado){
                                         elemento.classList.add('hidden');
+                                        console.log(todoList.contarPendientes.length);
+                                        
                                 }
                         break;
                         case 'Completados':
                                 if(!completado){
                                         elemento.classList.add('hidden');
+                                        
                                 }
                         break;
                 }
         }
 });
+
